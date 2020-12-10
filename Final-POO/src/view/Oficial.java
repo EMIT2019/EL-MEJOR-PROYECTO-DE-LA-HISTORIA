@@ -1238,17 +1238,11 @@ public class Oficial extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarUsuarioActionPerformed
 
     private void btnGuardarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarUsuarioActionPerformed
-        ArrayList<String> cedulas = new ArrayList<>();
-        ResultSet rs;
-        rs = tlb.listarUsuarios();
         String nombre, apellido, cedula, carnet, contraseña;
         char[] input;
 
         try {
-            while (rs.next()) {
-                cedulas.add(rs.getString("cedula"));
-            }
-
+           
             nombre = Unombre.getText();
             apellido = Uapellido.getText();
             cedula = Ucedula.getText();
@@ -1263,7 +1257,7 @@ public class Oficial extends javax.swing.JFrame {
             user.setPw(contraseña);
 
             //Verifica cedula unica
-            if (cedulas.contains(cedula)) {
+            if (tlb.listarUsuarios().contains(cedula)) {
                 JOptionPane.showMessageDialog(null, "Ya existe un usuario registrado con esta cedula.", "ERROR AL GUARDAR", JOptionPane.ERROR_MESSAGE);
             } //Verifica que todos los campos esten llenos
             else if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || carnet.isEmpty() || contraseña.isEmpty()) {

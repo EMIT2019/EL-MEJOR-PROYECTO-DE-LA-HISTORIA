@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
@@ -164,12 +165,19 @@ public class TablaUsuario extends Conexion {
     }
     
 
-    public ResultSet listarUsuarios() {
+    public ArrayList listarUsuarios() {
+        ArrayList<String> cedulas = new ArrayList<>();
         try {
 
             PreparedStatement statement = conn.prepareStatement(SELECT_ALL);
             ResultSet rs = statement.executeQuery();
-            return rs;
+            
+            while (rs.next()) {
+                cedulas.add(rs.getString("cedula"));
+            }
+            
+            
+            return cedulas;
 
         } catch (SQLException e) {
             e.printStackTrace();
