@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
@@ -104,6 +105,41 @@ public class TablaResidente extends Conexion {
             return null;
         }
     }
+    
+        public ArrayList listarCedulasResidentes() {
+        ArrayList<String> cedulas = new ArrayList<>();
+        try {
+
+            PreparedStatement statement = conn.prepareStatement(SELECT_ALL);
+            ResultSet rs = statement.executeQuery();
+            
+            while (rs.next()) {
+                cedulas.add(rs.getString("cedula"));
+            }
+            
+            
+            return cedulas;
+
+        } catch (SQLException e) {
+            return null;
+        }
+
+    }
+        
+        public ArrayList listarCodigoCasaResidentes() {
+            ArrayList<Integer> codigos = new ArrayList<>();
+            try {
+                PreparedStatement statement = conn.prepareStatement(SELECT_ALL);
+                ResultSet rs = statement.executeQuery();
+                
+                while(rs.next()) {
+                    codigos.add(rs.getInt("casa"));
+                }
+                return codigos;
+            } catch(SQLException e) {
+                return null;
+            }
+        }
 
     public ResultSet listarResidentes() {
         try {
@@ -118,6 +154,7 @@ public class TablaResidente extends Conexion {
         }
 
     }
+   
 
     public DefaultTableModel obtenerResidenteTabla(String id) {
         DefaultTableModel tbl = new DefaultTableModel();
@@ -192,32 +229,4 @@ public class TablaResidente extends Conexion {
         }
         return r;
     }
-
-} //fin class
-
-//    public void listarResidente(){
-//        Connection conn = this.obtenerConexion();
-//        try {
-//            Statement st = conn.createStatement();
-//            ResultSet rs = st.executeQuery(SELECT_ALL);
-//            
-//            ResultSetMetaData metaData = rs.getMetaData();
-//            int numDeColumna = metaData.getColumnCount();
-//            
-//            System.out.println("Tabla Residente");
-//            for(int i =1; i <= numDeColumna; i++){
-//                System.out.printf("%-8s\t", metaData.getColumnName(i));
-//                
-//            }
-//            System.out.println("");
-//            while (rs.next()){
-//                for(int i= 1; i<= numDeColumna; i++){
-//                    System.out.printf("%-8s \t", rs.getObject(i));
-//                }
-//                System.out.println("");
-//            }
-//        } catch (SQLException ex) {
-//            Logger.getLogger(TablaUsuario.class.getName()).log(Level.SEVERE, null, ex);
-//        }      
-//    }
-
+}

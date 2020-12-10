@@ -144,27 +144,7 @@ public class LoginOficial extends javax.swing.JFrame {
 
     private void jIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIngresarActionPerformed
         TablaUsuario Usuario = new TablaUsuario();
-//        String password = new String(tPassword.getPassword());
-//        ResultSet rs = Usuario.listarUsuarios(); 
-//        ArrayList<String> cedulaUsuario = new ArrayList<>(); 
-//        ArrayList<String> contraseñaUsuario = new ArrayList<>(); 
-
-//        try{
-//            while(rs.next()){
-//                cedulaUsuario.add(rs.getString("cedula")); 
-//                contraseñaUsuario.add(rs.getString("pw")); 
-//            }
-//        }catch(SQLException e){
-//            e.printStackTrace();
-//        }
-//       if (cedulaUsuario.contains(tUsuario.getText()) && (contraseñaUsuario.contains(password))){
-//        Oficial fm = new Oficial();
-//        fm.setVisible(true);
-//        this.setVisible(false);
-//        }else{
-//           JOptionPane.showMessageDialog(this, "USUARIO O CONTRASEÑA INCORRECTA");
-//        }
-        if (Usuario.autenticarUser(this.tUsuario.getText(), this.tPassword.getText())==1){
+        if (Usuario.autenticarUsuario(this.tUsuario.getText(), this.tPassword.getText())){
             Oficial fm = new Oficial();
             fm.setVisible(true);
             this.setVisible(false);

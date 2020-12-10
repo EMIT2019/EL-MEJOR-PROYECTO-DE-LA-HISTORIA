@@ -165,7 +165,7 @@ public class TablaUsuario extends Conexion {
     }
     
 
-    public ArrayList listarUsuarios() {
+    public ArrayList listarCedulasUsuarios() {
         ArrayList<String> cedulas = new ArrayList<>();
         try {
 
@@ -205,8 +205,8 @@ public class TablaUsuario extends Conexion {
 
     }
 
-    public int autenticarUser(String id, String pw) {
-        int b = 0;
+    public boolean autenticarUsuario(String id, String pw) {
+        boolean x = false;
         try {
 
             PreparedStatement statement = conn.prepareStatement(SELECT_USER);
@@ -214,14 +214,14 @@ public class TablaUsuario extends Conexion {
             statement.setString(2, pw);
             ResultSet rs = statement.executeQuery();
             if (rs.next()){
-                b = 1;
+                x= true;
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
             
         }
-        return b;
+        return x;
     }
 
 }
