@@ -149,11 +149,11 @@ public class Oficial extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        Vapellido = new javax.swing.JTextField();
-        Vnombre = new javax.swing.JTextField();
+        tfVapellido = new javax.swing.JTextField();
+        tfVnombre = new javax.swing.JTextField();
         jScrollPane13 = new javax.swing.JScrollPane();
-        Vcedula = new javax.swing.JTextPane();
-        VestadoCMBX = new javax.swing.JComboBox<>();
+        tfVcedula = new javax.swing.JTextPane();
+        VetadoCMBX = new javax.swing.JComboBox<>();
         btnActualizarVisitante = new javax.swing.JButton();
         btnGuardarVisitante = new javax.swing.JButton();
         btnBuscarVisitantes = new javax.swing.JButton();
@@ -976,10 +976,10 @@ public class Oficial extends javax.swing.JFrame {
         jLabel23.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel23.setText("Estado:");
 
-        jScrollPane13.setViewportView(Vcedula);
+        jScrollPane13.setViewportView(tfVcedula);
 
-        VestadoCMBX.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        VestadoCMBX.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "Betado", "No Betado" }));
+        VetadoCMBX.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        VetadoCMBX.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "Betado", "No Betado" }));
 
         btnActualizarVisitante.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         btnActualizarVisitante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Actualizar.png"))); // NOI18N
@@ -1079,18 +1079,18 @@ public class Oficial extends javax.swing.JFrame {
                                             .addComponent(jLabel23))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(VestadoCMBX, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(VetadoCMBX, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(50, 50, 50))
                                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                             .addComponent(jLabel20)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(Vapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(tfVapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel4Layout.createSequentialGroup()
                                             .addComponent(jLabel19)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(Vnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tfVnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(49, 49, 49))))
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -1111,7 +1111,7 @@ public class Oficial extends javax.swing.JFrame {
                                     .addComponent(VEventoMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(VEventoRazon, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(39, 39, 39)))
-                .addContainerGap(976, Short.MAX_VALUE))
+                .addContainerGap(977, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1125,7 +1125,7 @@ public class Oficial extends javax.swing.JFrame {
                                 .addGap(44, 44, 44)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel19)
-                                    .addComponent(Vnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(tfVnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(2, 2, 2)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1148,7 +1148,7 @@ public class Oficial extends javax.swing.JFrame {
                                     .addComponent(VEventoTransporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
-                                .addComponent(Vapellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tfVapellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jLabel22))
@@ -1157,7 +1157,7 @@ public class Oficial extends javax.swing.JFrame {
                     .addComponent(jLabel39)
                     .addComponent(VEventoMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel23)
-                    .addComponent(VestadoCMBX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(VetadoCMBX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
@@ -1282,27 +1282,26 @@ public class Oficial extends javax.swing.JFrame {
 
     private void btnBuscarVisitantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarVisitantesActionPerformed
         String cedula;
-
+        cedula = tfVcedula.getText();
+        Visitante user = new Visitante();
+        user = visitante.obtenerVisitantexCedula(cedula);
         try {
-            cedula = Vcedula.getText();
-            ResultSet rs = visitante.obtenerVisitante(cedula);
-
-            try {
-                if (rs.next()) {
-                    Vnombre.setText(rs.getString("nombres"));
+            if (!user.getCedula().equals("")) {
+                tfVnombre.setText(user.getNombres());
+                tfVapellido.setText(user.getApellidos());
+                
+                
+                if(user.getVetado() == true){
+                    JOptionPane.showMessageDialog(null, ""+user.getNombres()+" esta vetado."); 
+                }else if(user.getVetado() == false){
+                    JOptionPane.showMessageDialog(null, ""+user.getNombres()+" no esta vetado.");
                 }
-                Vapellido.setText(rs.getString("apellidos"));
-                if (rs.getBoolean("vetado") == true) {
-                    JOptionPane.showMessageDialog(null, "El visitante esta vetado!", "Alerta!", JOptionPane.WARNING_MESSAGE);
-                } else {
-                    JOptionPane.showMessageDialog(null, "El visitante no esta vetado.");
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "No se ha logrado encontrar el registro.", "Alerta", JOptionPane.ERROR_MESSAGE);
             }
-
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta!", JOptionPane.WARNING_MESSAGE);
+        }catch (Exception e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnBuscarVisitantesActionPerformed
 
@@ -1311,10 +1310,10 @@ public class Oficial extends javax.swing.JFrame {
         boolean aux;
 
         try {
-            nombre = Vnombre.getText();
-            apellido = Vapellido.getText();
-            cedula = Vcedula.getText();
-            estado = VestadoCMBX.getSelectedItem().toString();
+            nombre = tfVnombre.getText();
+            apellido = tfVapellido.getText();
+            cedula = tfVcedula.getText();
+            estado = VetadoCMBX.getSelectedItem().toString();
 
             if (estado.equals("Betado")) {
                 aux = true;
@@ -1455,7 +1454,7 @@ public class Oficial extends javax.swing.JFrame {
         java.util.Date eventoFecha;
 
         try {
-            nombre = Vnombre.getText();
+            nombre = tfVnombre.getText();
             transporte = VEventoTransporte.getSelectedItem().toString();
             matricula = VEventoMatricula.getText();
             RZvisita = VEventoRazon.getSelectedItem().toString();
@@ -1610,32 +1609,36 @@ public class Oficial extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarCasaTablaVisitanteActionPerformed
 
     private void btnActualizarVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarVisitanteActionPerformed
-        String nombre, apellido, cedula, estado;
-        boolean aux;
+        String nombre, apellido, cedula;
+        boolean aux; 
 
+        cedula = tfVcedula.getText();
+        Visitante user = visitante.obtenerVisitantexCedula(cedula);
         try {
-            nombre = Vnombre.getText();
-            apellido = Vapellido.getText();
-            cedula = Vcedula.getText();
-            estado = VestadoCMBX.getSelectedItem().toString();
+            if (!user.getCedula().equals("")) {
+                nombre = tfVnombre.getText();
+                apellido = tfVapellido.getText();
+                
+                if(VetadoCMBX.getSelectedItem().toString().equals("Betado")){
+                    aux = true; 
+                }else {
+                    aux = false; 
+                }
 
-            if (estado.equals("Betado")) {
-                aux = true;
-                //JOptionPane.showMessageDialog(null, "El visitante esta betado del recidencial"); 
+                System.out.println(nombre + apellido + cedula + aux);
+                
+                if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta", JOptionPane.WARNING_MESSAGE);
+                } else {
+                    visitante.actualizarVisitante(cedula, nombre, apellido, aux);
+                    JOptionPane.showMessageDialog(null, "Se ha actualizado el registro de manera exitosa.", "ALERTA", JOptionPane.INFORMATION_MESSAGE);
+                    limpiarFormUsuario();
+                }
             } else {
-                aux = false;
+                JOptionPane.showMessageDialog(null, "No se ha logrado encontrar el registro a actualizar.", "Alerta", JOptionPane.ERROR_MESSAGE);
             }
-
-            v.setNombres(nombre);
-            v.setApellidos(apellido);
-            v.setCedula(cedula);
-            v.setVetado(aux);
-
-            visitante.actualizarVisitante(v.getCedula(), v.getNombres(), v.getApellidos(), v.getVetado());
-
-            //JOptionPane.showMessageDialog(null, "Datos del visitante: " + v.getNombres() + " " + v.getApellidos() + " " + v.getCedula() + " " + v.isVetado());
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta!", JOptionPane.WARNING_MESSAGE);
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnActualizarVisitanteActionPerformed
 
@@ -1676,9 +1679,8 @@ public class Oficial extends javax.swing.JFrame {
             if (!res.getCedula().equals("")) {
                 nombre = tfResidenteNombre.getText();
                 apellido = tfResidenteApellido.getText();
-                cedula = Ucedula.getText();
                 casa = Integer.parseInt(tfResidenteNoCasa.getText()); 
-                dependientes = Integer.parseInt(tfResidenteFam.getText()); 
+                dependientes = Integer.parseInt(tfResidenteFam.getText());
 
                 if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || casa == 0 || dependientes == 0) {
                     JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta", JOptionPane.WARNING_MESSAGE);
@@ -1745,10 +1747,7 @@ public class Oficial extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> VEventoRazon;
     private javax.swing.JComboBox<String> VEventoTransporte;
     private javax.swing.JTextField VEventoUsuario;
-    private javax.swing.JTextField Vapellido;
-    private javax.swing.JTextPane Vcedula;
-    private javax.swing.JComboBox<String> VestadoCMBX;
-    private javax.swing.JTextField Vnombre;
+    private javax.swing.JComboBox<String> VetadoCMBX;
     private javax.swing.JButton btnActualizarResidente;
     private javax.swing.JButton btnActualizarUsuario;
     private javax.swing.JButton btnActualizarVisitante;
@@ -1846,5 +1845,8 @@ public class Oficial extends javax.swing.JFrame {
     private javax.swing.JTextField tfResidenteFam;
     private javax.swing.JTextPane tfResidenteNoCasa;
     private javax.swing.JTextField tfResidenteNombre;
+    private javax.swing.JTextField tfVapellido;
+    private javax.swing.JTextPane tfVcedula;
+    private javax.swing.JTextField tfVnombre;
     // End of variables declaration//GEN-END:variables
 }

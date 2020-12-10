@@ -1467,7 +1467,7 @@
                                               </Group>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="VestadoCMBX" min="-2" pref="265" max="-2" attributes="0"/>
+                                                  <Component id="VetadoCMBX" min="-2" pref="265" max="-2" attributes="0"/>
                                                   <Component id="jScrollPane13" min="-2" pref="265" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -1476,12 +1476,12 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="Vapellido" min="-2" pref="265" max="-2" attributes="0"/>
+                                                  <Component id="tfVapellido" min="-2" pref="265" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="Vnombre" min="-2" pref="265" max="-2" attributes="0"/>
+                                                  <Component id="tfVnombre" min="-2" pref="265" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -1513,7 +1513,7 @@
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="976" max="32767" attributes="0"/>
+                      <EmptySpace pref="977" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1529,7 +1529,7 @@
                                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="Vnombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tfVnombre" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -1561,7 +1561,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="Vapellido" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tfVapellido" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jScrollPane13" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -1574,7 +1574,7 @@
                           <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="VEventoMatricula" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="VestadoCMBX" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="VetadoCMBX" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1626,9 +1626,9 @@
                 <Property name="text" type="java.lang.String" value="Estado:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="Vapellido">
+            <Component class="javax.swing.JTextField" name="tfVapellido">
             </Component>
-            <Component class="javax.swing.JTextField" name="Vnombre">
+            <Component class="javax.swing.JTextField" name="tfVnombre">
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane13">
               <AuxValues>
@@ -1637,11 +1637,11 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="Vcedula">
+                <Component class="javax.swing.JTextPane" name="tfVcedula">
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JComboBox" name="VestadoCMBX">
+            <Component class="javax.swing.JComboBox" name="VetadoCMBX">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>

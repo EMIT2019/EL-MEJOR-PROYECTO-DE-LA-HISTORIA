@@ -14,6 +14,8 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import models.Usuario;
+import models.Visitante;
 /**
  *
  * @author JJ
@@ -175,6 +177,27 @@ public class TablaVisitante extends Conexion {
 
         }
         return tbl;
+    }
+        
+        
+        public Visitante obtenerVisitantexCedula(String id) {
+        Visitante v = new Visitante();
+        try {
+
+            PreparedStatement statement = conn.prepareStatement(SELECT_BY_ID);
+            statement.setString(1, id);
+            ResultSet rs = statement.executeQuery();
+            if(rs.next()){
+                v.setCedula(rs.getString("cedula"));
+                v.setNombres(rs.getString("nombres"));
+                v.setApellidos(rs.getString(("apellidos")));
+                v.setVetado(rs.getBoolean("vetado"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return v;
     }
     
 }
