@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-
+import models.Casa;
 /**
  *
  * @author JJ
@@ -96,6 +96,27 @@ public class TablaCasa extends Conexion {
             e.printStackTrace();
             return null;
         }
+      }
+      
+      public Casa obtenerCasaxCodigo(String codigo)
+      {
+          Casa casa = new Casa();
+          try {
+
+            PreparedStatement statement = conn.prepareStatement(SELECT_BY_ID);
+            statement.setString(1, codigo);
+            ResultSet rs = statement.executeQuery();
+            if(rs.next()){
+                casa.setCodigo(Integer.parseInt(rs.getString("codigo")));
+                casa.setDescripcion(rs.getString("descripcion"));
+                casa.setDireccion(rs.getString("direccion"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+          return casa;
       }
         
         public ResultSet listarCasas() {

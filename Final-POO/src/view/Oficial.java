@@ -29,10 +29,10 @@ public class Oficial extends javax.swing.JFrame {
     Visita visita = new Visita();
     Casa c = new Casa();
     SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-    TablaUsuario tlb = new TablaUsuario();
-    TablaResidente tlbR = new TablaResidente();
-    TablaCasa tlbC = new TablaCasa();
-    TablaVisitante visitante = new TablaVisitante();
+    TablaUsuario tblUsuario = new TablaUsuario();
+    TablaResidente tblResidente = new TablaResidente();
+    TablaCasa tblCasa = new TablaCasa();
+    TablaVisitante tblVisitante = new TablaVisitante();
     TablaVisita tblVisita = new TablaVisita();
 
     /**
@@ -40,10 +40,10 @@ public class Oficial extends javax.swing.JFrame {
      */
     public Oficial() {
         initComponents();
-        this.tblTablaMostrarUsuarios.setModel(tlb.obtenerUsuario()); 
-        this.tblTablaMostrarResidente.setModel(tlbR.obtenerResidenteTabla());
-        this.tblTablaMostrarCasa.setModel(tlbC.obtenerCasaTabla());
-        this.tblTablaMostrarVisitantes.setModel(visitante.obtenerVisitanteTabla());
+        this.tblTablaMostrarUsuarios.setModel(tblUsuario.obtenerUsuario()); 
+        this.tblTablaMostrarResidente.setModel(tblResidente.obtenerResidenteTabla());
+        this.tblTablaMostrarCasa.setModel(tblCasa.obtenerCasaTabla());
+        this.tblTablaMostrarVisitantes.setModel(tblVisitante.obtenerVisitanteTabla());
         this.tblTablaMostrarVisitas.setModel(tblVisita.obtenerVisitaTabla());
     }
 
@@ -105,16 +105,16 @@ public class Oficial extends javax.swing.JFrame {
         btnGuardarUsuario = new javax.swing.JButton();
         btnBuscarUsuario = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        Uapellido = new javax.swing.JTextField();
-        Unombre = new javax.swing.JTextField();
+        tfUsuarioApellido = new javax.swing.JTextField();
+        tfUsuarioNombre = new javax.swing.JTextField();
         jScrollPane14 = new javax.swing.JScrollPane();
-        Ucedula = new javax.swing.JTextPane();
+        tfUsuarioCedula = new javax.swing.JTextPane();
         jLabel28 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         btnEliminarUsuario = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
-        Ucarnet = new javax.swing.JTextField();
-        Upassword = new javax.swing.JPasswordField();
+        tfUsuarioCarnet = new javax.swing.JTextField();
+        tfUsuarioContrasena = new javax.swing.JPasswordField();
         jLabel30 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -141,19 +141,19 @@ public class Oficial extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        CasaDescripcion = new javax.swing.JTextArea();
+        tfCasaDescripcion = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
-        CasaDireccion = new javax.swing.JTextArea();
+        tfCasaDireccion = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        tfVapellido = new javax.swing.JTextField();
-        tfVnombre = new javax.swing.JTextField();
+        tfVisitanteApellido = new javax.swing.JTextField();
+        tfVisitanteNombre = new javax.swing.JTextField();
         jScrollPane13 = new javax.swing.JScrollPane();
-        tfVcedula = new javax.swing.JTextPane();
-        VetadoCMBX = new javax.swing.JComboBox<>();
+        tfVisitanteCedula = new javax.swing.JTextPane();
+        cboVisitanteEstado = new javax.swing.JComboBox<>();
         btnActualizarVisitante = new javax.swing.JButton();
         btnGuardarVisitante = new javax.swing.JButton();
         btnBuscarVisitantes = new javax.swing.JButton();
@@ -163,13 +163,13 @@ public class Oficial extends javax.swing.JFrame {
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        VEventoDestino = new javax.swing.JTextField();
-        VEventoMatricula = new javax.swing.JTextField();
-        VEventoFecha = new javax.swing.JTextField();
-        VEventoRazon = new javax.swing.JComboBox<>();
-        VEventoTransporte = new javax.swing.JComboBox<>();
+        tfVisitanteCasa = new javax.swing.JTextField();
+        tfVisitanteMatricula = new javax.swing.JTextField();
+        tfFechaVisita = new javax.swing.JTextField();
+        cboVisitanteRazonVisita = new javax.swing.JComboBox<>();
+        cboVisitanteTransporte = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
-        VEventoUsuario = new javax.swing.JTextField();
+        tfVisitanteResponsable = new javax.swing.JTextField();
         btnGuardarVisita = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
@@ -646,7 +646,7 @@ public class Oficial extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel10.setText("Registrar Usuario");
 
-        jScrollPane14.setViewportView(Ucedula);
+        jScrollPane14.setViewportView(tfUsuarioCedula);
 
         jLabel28.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel28.setText("Apellidos:");
@@ -689,11 +689,11 @@ public class Oficial extends javax.swing.JFrame {
                             .addComponent(jLabel11))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Uapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Unombre, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfUsuarioApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfUsuarioNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Ucarnet, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Upassword, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfUsuarioCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfUsuarioContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel20Layout.createSequentialGroup()
                                 .addComponent(btnGuardarUsuario)
                                 .addGap(9, 9, 9)
@@ -718,10 +718,10 @@ public class Oficial extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
-                    .addComponent(Unombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfUsuarioNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Uapellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfUsuarioApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel28))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -731,10 +731,10 @@ public class Oficial extends javax.swing.JFrame {
                         .addGap(17, 17, 17)
                         .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel16)
-                            .addComponent(Ucarnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(tfUsuarioCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Upassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfUsuarioContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
                 .addGap(49, 49, 49)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -846,13 +846,13 @@ public class Oficial extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel17.setText("Direccion");
 
-        CasaDescripcion.setColumns(20);
-        CasaDescripcion.setRows(5);
-        jScrollPane3.setViewportView(CasaDescripcion);
+        tfCasaDescripcion.setColumns(20);
+        tfCasaDescripcion.setRows(5);
+        jScrollPane3.setViewportView(tfCasaDescripcion);
 
-        CasaDireccion.setColumns(20);
-        CasaDireccion.setRows(5);
-        jScrollPane7.setViewportView(CasaDireccion);
+        tfCasaDireccion.setColumns(20);
+        tfCasaDireccion.setRows(5);
+        jScrollPane7.setViewportView(tfCasaDireccion);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -976,10 +976,10 @@ public class Oficial extends javax.swing.JFrame {
         jLabel23.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel23.setText("Estado:");
 
-        jScrollPane13.setViewportView(tfVcedula);
+        jScrollPane13.setViewportView(tfVisitanteCedula);
 
-        VetadoCMBX.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        VetadoCMBX.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "Betado", "No Betado" }));
+        cboVisitanteEstado.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cboVisitanteEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "Betado", "No Betado" }));
 
         btnActualizarVisitante.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         btnActualizarVisitante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Actualizar.png"))); // NOI18N
@@ -1027,18 +1027,18 @@ public class Oficial extends javax.swing.JFrame {
         jLabel40.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel40.setText("Razon de visita:");
 
-        VEventoRazon.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        VEventoRazon.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "Evento Social", "Trabajo" }));
+        cboVisitanteRazonVisita.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cboVisitanteRazonVisita.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "Evento Social", "Trabajo" }));
 
-        VEventoTransporte.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        VEventoTransporte.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciones una opcion", "Vehiculo", "Motocicleta", "Bicileta", "Peaton" }));
+        cboVisitanteTransporte.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cboVisitanteTransporte.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciones una opcion", "Vehiculo", "Motocicleta", "Bicileta", "Peaton" }));
 
         jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel13.setText("Responsable:");
 
-        VEventoUsuario.addActionListener(new java.awt.event.ActionListener() {
+        tfVisitanteResponsable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VEventoUsuarioActionPerformed(evt);
+                tfVisitanteResponsableActionPerformed(evt);
             }
         });
 
@@ -1079,18 +1079,18 @@ public class Oficial extends javax.swing.JFrame {
                                             .addComponent(jLabel23))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(VetadoCMBX, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cboVisitanteEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(50, 50, 50))
                                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                             .addComponent(jLabel20)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(tfVapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(tfVisitanteApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel4Layout.createSequentialGroup()
                                             .addComponent(jLabel19)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(tfVnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tfVisitanteNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(49, 49, 49))))
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -1104,12 +1104,12 @@ public class Oficial extends javax.swing.JFrame {
                                     .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(VEventoDestino, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(VEventoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(VEventoFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(VEventoTransporte, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(VEventoMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(VEventoRazon, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(tfVisitanteCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfVisitanteResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfFechaVisita, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cboVisitanteTransporte, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfVisitanteMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cboVisitanteRazonVisita, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(39, 39, 39)))
                 .addContainerGap(977, Short.MAX_VALUE))
         );
@@ -1125,43 +1125,43 @@ public class Oficial extends javax.swing.JFrame {
                                 .addGap(44, 44, 44)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel19)
-                                    .addComponent(tfVnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(tfVisitanteNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(2, 2, 2)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(VEventoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfVisitanteResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel13))
                                 .addGap(19, 19, 19)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel36)
-                                    .addComponent(VEventoDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(tfVisitanteCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel20)
                                     .addComponent(jLabel37)
-                                    .addComponent(VEventoFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(tfFechaVisita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(20, 20, 20)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel38)
-                                    .addComponent(VEventoTransporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(cboVisitanteTransporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
-                                .addComponent(tfVapellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tfVisitanteApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jLabel22))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
-                    .addComponent(VEventoMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfVisitanteMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel23)
-                    .addComponent(VetadoCMBX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboVisitanteEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
-                    .addComponent(VEventoRazon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboVisitanteRazonVisita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(63, 63, 63)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarVisita)
@@ -1191,19 +1191,19 @@ public class Oficial extends javax.swing.JFrame {
         String cedula; 
         
         cedula = tfBuscarResidenteP.getText();
-        this.tblTablaMostrarResidente.setModel(tlbR.obtenerResidenteTabla(cedula));
+        this.tblTablaMostrarResidente.setModel(tblResidente.obtenerResidenteTabla(cedula));
     }//GEN-LAST:event_btnbuscarResidenteTablaActionPerformed
 
     private void btnMostrarTablaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarTablaUsuarioActionPerformed
-        this.tblTablaMostrarUsuarios.setModel(tlb.obtenerUsuario());
+        this.tblTablaMostrarUsuarios.setModel(tblUsuario.obtenerUsuario());
     }//GEN-LAST:event_btnMostrarTablaUsuarioActionPerformed
 
     private void limpiarFormUsuario() {
-        Unombre.setText("");
-        Uapellido.setText("");
-        Ucedula.setText("");
-        Upassword.setText("");
-        Ucarnet.setText("");
+        tfUsuarioNombre.setText("");
+        tfUsuarioApellido.setText("");
+        tfUsuarioCedula.setText("");
+        tfUsuarioContrasena.setText("");
+        tfUsuarioCarnet.setText("");
     }
 
     private void limpiarFormResidente() {
@@ -1212,20 +1212,20 @@ public class Oficial extends javax.swing.JFrame {
         tfResidenteCedula.setText("");
         tfResidenteNoCasa.setText("");
         tfResidenteFam.setText("");
-        CasaDescripcion.setText("");
-        CasaDireccion.setText("");
+        tfCasaDescripcion.setText("");
+        tfCasaDireccion.setText("");
     }
 
     private void btnBuscarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarUsuarioActionPerformed
         String cedula;
-        cedula = Ucedula.getText();
+        cedula = tfUsuarioCedula.getText();
         Usuario user = new Usuario();
-        user = tlb.obtenerUsuarioxCedula(cedula);
+        user = tblUsuario.obtenerUsuarioxCedula(cedula);
         try {
             if (!user.getCedula().equals("")) {
-                Unombre.setText(user.getNombres());
-                Uapellido.setText(user.getApellidos());
-                Ucarnet.setText(user.getCarnet());
+                tfUsuarioNombre.setText(user.getNombres());
+                tfUsuarioApellido.setText(user.getApellidos());
+                tfUsuarioCarnet.setText(user.getCarnet());
 
             } else {
                 JOptionPane.showMessageDialog(null, "No se ha logrado encontrar el registro.", "Alerta", JOptionPane.ERROR_MESSAGE);
@@ -1243,11 +1243,11 @@ public class Oficial extends javax.swing.JFrame {
 
         try {
            
-            nombre = Unombre.getText();
-            apellido = Uapellido.getText();
-            cedula = Ucedula.getText();
-            carnet = Ucarnet.getText();
-            input = Upassword.getPassword();
+            nombre = tfUsuarioNombre.getText();
+            apellido = tfUsuarioApellido.getText();
+            cedula = tfUsuarioCedula.getText();
+            carnet = tfUsuarioCarnet.getText();
+            input = tfUsuarioContrasena.getPassword();
             contraseña = new String(input);
 
             user.setNombres(nombre);
@@ -1257,13 +1257,13 @@ public class Oficial extends javax.swing.JFrame {
             user.setPw(contraseña);
 
             //Verifica cedula unica
-            if (tlb.listarUsuarios().contains(cedula)) {
+            if (tblUsuario.listarUsuarios().contains(cedula)) {
                 JOptionPane.showMessageDialog(null, "Ya existe un usuario registrado con esta cedula.", "ERROR AL GUARDAR", JOptionPane.ERROR_MESSAGE);
             } //Verifica que todos los campos esten llenos
             else if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || carnet.isEmpty() || contraseña.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta", JOptionPane.WARNING_MESSAGE);
             } else {
-                tlb.registrarUsuario(user.getCedula(), user.getNombres(), user.getApellidos(), user.getCarnet(), user.getPw());
+                tblUsuario.registrarUsuario(user.getCedula(), user.getNombres(), user.getApellidos(), user.getCarnet(), user.getPw());
                 limpiarFormUsuario();
                 JOptionPane.showMessageDialog(null, "Se ha guardado el registro de manera exitosa.", "ALERTA", JOptionPane.INFORMATION_MESSAGE);
 
@@ -1276,13 +1276,13 @@ public class Oficial extends javax.swing.JFrame {
 
     private void btnBuscarVisitantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarVisitantesActionPerformed
         String cedula;
-        cedula = tfVcedula.getText();
+        cedula = tfVisitanteCedula.getText();
         Visitante user = new Visitante();
-        user = visitante.obtenerVisitantexCedula(cedula);
+        user = tblVisitante.obtenerVisitantexCedula(cedula);
         try {
             if (!user.getCedula().equals("")) {
-                tfVnombre.setText(user.getNombres());
-                tfVapellido.setText(user.getApellidos());
+                tfVisitanteNombre.setText(user.getNombres());
+                tfVisitanteApellido.setText(user.getApellidos());
                 
                 
                 if(user.getVetado() == true){
@@ -1304,14 +1304,14 @@ public class Oficial extends javax.swing.JFrame {
         boolean aux;
 
         try {
-            nombre = tfVnombre.getText();
-            apellido = tfVapellido.getText();
-            cedula = tfVcedula.getText();
-            estado = VetadoCMBX.getSelectedItem().toString();
+            nombre = tfVisitanteNombre.getText();
+            apellido = tfVisitanteApellido.getText();
+            cedula = tfVisitanteCedula.getText();
+            estado = cboVisitanteEstado.getSelectedItem().toString();
 
             if (estado.equals("Betado")) {
                 aux = true;
-                //JOptionPane.showMessageDialog(null, "El visitante esta betado del recidencial"); 
+                //JOptionPane.showMessageDialog(null, "El tblVisitante esta betado del recidencial"); 
             } else {
                 aux = false;
             }
@@ -1321,9 +1321,9 @@ public class Oficial extends javax.swing.JFrame {
             v.setCedula(cedula);
             v.setVetado(aux);
 
-            visitante.registrarVisitante(v.getCedula(), v.getNombres(), v.getApellidos(), v.getVetado());
+            tblVisitante.registrarVisitante(v.getCedula(), v.getNombres(), v.getApellidos(), v.getVetado());
 
-            //JOptionPane.showMessageDialog(null, "Datos del visitante: " + v.getNombres() + " " + v.getApellidos() + " " + v.getCedula() + " " + v.isVetado());
+            //JOptionPane.showMessageDialog(null, "Datos del tblVisitante: " + v.getNombres() + " " + v.getApellidos() + " " + v.getCedula() + " " + v.isVetado());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta!", JOptionPane.WARNING_MESSAGE);
         }
@@ -1333,8 +1333,8 @@ public class Oficial extends javax.swing.JFrame {
         ArrayList<String> cedulas = new ArrayList<>();
         ArrayList<Integer> casas = new ArrayList<>();
 
-        ResultSet rsCedulas = tlbR.listarResidentes();
-        ResultSet rsCasas = tlbC.listarCasas();
+        ResultSet rsCedulas = tblResidente.listarResidentes();
+        ResultSet rsCasas = tblCasa.listarCasas();
 
         String nombres, apellidos, cedula, descripcion, direccion;
         int codigoCasa, dependientes;
@@ -1350,8 +1350,8 @@ public class Oficial extends javax.swing.JFrame {
             cedula = tfResidenteCedula.getText();
             codigoCasa = Integer.parseInt(tfResidenteNoCasa.getText());
             dependientes = Integer.parseInt(tfResidenteFam.getText());
-            descripcion = CasaDescripcion.getText();
-            direccion = CasaDireccion.getText();
+            descripcion = tfCasaDescripcion.getText();
+            direccion = tfCasaDireccion.getText();
 
             re.setNombres(nombres);
             re.setApellidos(apellidos);
@@ -1375,8 +1375,8 @@ public class Oficial extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Ya existe una casa registrada con este codigo.", "ERROR AL GUARDAR", JOptionPane.ERROR_MESSAGE);
             } //Persiste
             else {
-                tlbC.registrarCasa(re.getNumeroCasa(), c.getDescripcion(), c.getDireccion());
-                tlbR.registrarResidente(re.getCedula(), re.getNombres(), re.getApellidos(), re.getDependientes(), re.getNumeroCasa());
+                tblCasa.registrarCasa(re.getNumeroCasa(), c.getDescripcion(), c.getDireccion());
+                tblResidente.registrarResidente(re.getCedula(), re.getNombres(), re.getApellidos(), re.getDependientes(), re.getNumeroCasa());
                 limpiarFormResidente();
                 JOptionPane.showMessageDialog(null, "Se ha guardado el registro de manera exitosa.", "ALERTA", JOptionPane.INFORMATION_MESSAGE);
             }
@@ -1403,8 +1403,8 @@ public class Oficial extends javax.swing.JFrame {
 //            c.setDescripcion(descripcion);
 //            c.setDireccion(direccion); 
 //            
-//            tlbC.registrarCasa(re.getNumeroCasa(), c.getDescripcion(), c.getDireccion()); 
-//            tlbR.registrarResidente(re.getCedula(), re.getNombres(), re.getApellidos(), re.getDependientes(), re.getNumeroCasa()); 
+//            tblCasa.registrarCasa(re.getNumeroCasa(), c.getDescripcion(), c.getDireccion()); 
+//            tblResidente.registrarResidente(re.getCedula(), re.getNombres(), re.getApellidos(), re.getDependientes(), re.getNumeroCasa()); 
 //            
 //        } catch (Exception e) {
 //            JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta", JOptionPane.WARNING_MESSAGE);
@@ -1415,32 +1415,27 @@ public class Oficial extends javax.swing.JFrame {
     private void btnBuscarResidenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarResidenteActionPerformed
         String cedula;
         cedula = tfResidenteCedula.getText();
-        ResultSet rsResidente = tlbR.obtenerResidente(cedula);
-
-        try {
-            if (rsResidente.next()) {
-                tfResidenteNombre.setText(rsResidente.getString("nombres"));
-                tfResidenteApellido.setText(rsResidente.getString("apellidos"));
-                tfResidenteNoCasa.setText(rsResidente.getString("casa"));
-                tfResidenteFam.setText(rsResidente.getString("dependientes"));
-
-                ResultSet rsCasa = tlbC.obtenerCasa(rsResidente.getInt("casa"));
-                if (rsCasa.next()) {
-                    CasaDescripcion.setText(rsCasa.getString("descripcion"));
-                    CasaDireccion.setText(rsCasa.getString("direccion"));
-                }
+        Residente res = tblResidente.obtenerResidentexCedula(cedula);
+        Casa casa = tblCasa.obtenerCasaxCodigo(Integer.toString(res.getNumeroCasa()));
+ 
+            if (!res.getCedula().equals("")) {
+                tfResidenteNombre.setText(res.getNombres());
+                tfResidenteApellido.setText(res.getApellidos());
+                tfResidenteNoCasa.setText(Integer.toString(res.getNumeroCasa()));
+                tfResidenteFam.setText(Integer.toString(res.getDependientes()));
+                
+                tfCasaDescripcion.setText(casa.getDescripcion());
+                tfCasaDireccion.setText(casa.getDireccion());
             } else {
                 JOptionPane.showMessageDialog(null, "No se ha logrado encontrar el registro.", "Alerta", JOptionPane.ERROR_MESSAGE);
             }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        
     }//GEN-LAST:event_btnBuscarResidenteActionPerformed
 
-    private void VEventoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VEventoUsuarioActionPerformed
+    private void tfVisitanteResponsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfVisitanteResponsableActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_VEventoUsuarioActionPerformed
+    }//GEN-LAST:event_tfVisitanteResponsableActionPerformed
 
     private void btnGuardarVisitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVisitaActionPerformed
         String transporte, matricula, RZvisita, nombre, currentUser, eventoFechaString;
@@ -1448,13 +1443,13 @@ public class Oficial extends javax.swing.JFrame {
         java.util.Date eventoFecha;
 
         try {
-            nombre = tfVnombre.getText();
-            transporte = VEventoTransporte.getSelectedItem().toString();
-            matricula = VEventoMatricula.getText();
-            RZvisita = VEventoRazon.getSelectedItem().toString();
-            destino = Integer.parseInt(VEventoDestino.getText());
-            eventoFecha = formato.parse(VEventoFecha.getText());
-            currentUser = VEventoUsuario.getText();
+            nombre = tfVisitanteNombre.getText();
+            transporte = cboVisitanteTransporte.getSelectedItem().toString();
+            matricula = tfVisitanteMatricula.getText();
+            RZvisita = cboVisitanteRazonVisita.getSelectedItem().toString();
+            destino = Integer.parseInt(tfVisitanteCasa.getText());
+            eventoFecha = formato.parse(tfFechaVisita.getText());
+            currentUser = tfVisitanteResponsable.getText();
 
             visita.setUsuario(currentUser);
             visita.setVisitante(nombre);
@@ -1467,7 +1462,7 @@ public class Oficial extends javax.swing.JFrame {
             eventoFechaString = formato.format(eventoFecha);
 
             tblVisita.registrarVisita(visita.getUsuario(), visita.getNumeroCasa(), visita.getVisitante(), eventoFechaString, visita.getRazonVisita(), visita.getTransporte(), visita.getMatricula());
-            //JOptionPane.showMessageDialog(null, "Datos del visitante: " + visita.getVisitante()+ " " + visita.getRazonVisita() + " " + visita.getTransporte() + " " + visita.getMatricula() + " " + visita.getCasa() + " " + visita.getUsuario() + " " + visita.getFecha());
+            //JOptionPane.showMessageDialog(null, "Datos del tblVisitante: " + visita.getVisitante()+ " " + visita.getRazonVisita() + " " + visita.getTransporte() + " " + visita.getMatricula() + " " + visita.getCasa() + " " + visita.getUsuario() + " " + visita.getFecha());
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta", JOptionPane.WARNING_MESSAGE);
@@ -1480,9 +1475,9 @@ public class Oficial extends javax.swing.JFrame {
 //        int i = TablaMostrarUsuarios.getRowCount(); 
 //        modeloU = (DefaultTableModel) TablaMostrarUsuarios.getModel();
         cedula = BusquedaUsuarioP.getText();
-        this.tblTablaMostrarUsuarios.setModel(tlb.obtenerUsuario(cedula));
+        this.tblTablaMostrarUsuarios.setModel(tblUsuario.obtenerUsuario(cedula));
 
-//        ResultSet rs = tlb.obtenerUsuario(cedula);
+//        ResultSet rs = tblUsuario.obtenerUsuario(cedula);
 //        
 //        System.out.println(TablaMostrarUsuarios.getRowCount());
 //        
@@ -1505,26 +1500,26 @@ public class Oficial extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarUsuarioTablaActionPerformed
 
     private void btnMostrarTablaCasasResidentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarTablaCasasResidentesActionPerformed
-        this.tblTablaMostrarCasa.setModel(tlbC.obtenerCasaTabla());
+        this.tblTablaMostrarCasa.setModel(tblCasa.obtenerCasaTabla());
     }//GEN-LAST:event_btnMostrarTablaCasasResidentesActionPerformed
 
     private void btnBuscarCasaTablaResidenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarCasaTablaResidenteActionPerformed
         String cedula; 
         
         cedula = tfBuscarCasaP.getText(); 
-        this.tblTablaMostrarCasa.setModel(tlbC.obtenerCasaTabla(cedula));
+        this.tblTablaMostrarCasa.setModel(tblCasa.obtenerCasaTabla(cedula));
     }//GEN-LAST:event_btnBuscarCasaTablaResidenteActionPerformed
 
     private void btnMostrarTablaResidenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarTablaResidenteActionPerformed
-        this.tblTablaMostrarResidente.setModel(tlbR.obtenerResidenteTabla());
+        this.tblTablaMostrarResidente.setModel(tblResidente.obtenerResidenteTabla());
     }//GEN-LAST:event_btnMostrarTablaResidenteActionPerformed
 
     private void btnEliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarUsuarioActionPerformed
         String cedula, idBuscar;
         int aux = 2;
 
-        cedula = Ucedula.getText();
-        Usuario user = tlb.obtenerUsuarioxCedula(cedula);
+        cedula = tfUsuarioCedula.getText();
+        Usuario user = tblUsuario.obtenerUsuarioxCedula(cedula);
 
         try {
 
@@ -1539,8 +1534,8 @@ public class Oficial extends javax.swing.JFrame {
 
         if (JOptionPane.OK_OPTION == aux) {
             try {
-                cedula = Ucedula.getText();
-                tlb.borrarUsuario(cedula);
+                cedula = tfUsuarioCedula.getText();
+                tblUsuario.borrarUsuario(cedula);
                 limpiarFormUsuario();
 
             } catch (Exception e) {
@@ -1553,21 +1548,21 @@ public class Oficial extends javax.swing.JFrame {
         String nombre, apellido, cedula, carnet, contraseña;
         char[] input;
 
-        cedula = Ucedula.getText();
-        Usuario user = tlb.obtenerUsuarioxCedula(cedula);
+        cedula = tfUsuarioCedula.getText();
+        Usuario user = tblUsuario.obtenerUsuarioxCedula(cedula);
         try {
             if (!user.getCedula().equals("")) {
-                nombre = Unombre.getText();
-                apellido = Uapellido.getText();
-                cedula = Ucedula.getText();
-                carnet = Ucarnet.getText();
-                input = Upassword.getPassword();
+                nombre = tfUsuarioNombre.getText();
+                apellido = tfUsuarioApellido.getText();
+                cedula = tfUsuarioCedula.getText();
+                carnet = tfUsuarioCarnet.getText();
+                input = tfUsuarioContrasena.getPassword();
                 contraseña = new String(input);
 
                 if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || carnet.isEmpty() || contraseña.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta", JOptionPane.WARNING_MESSAGE);
                 } else {
-                    tlb.actualizarUsuario(cedula, nombre, apellido, carnet, contraseña);
+                    tblUsuario.actualizarUsuario(cedula, nombre, apellido, carnet, contraseña);
                     JOptionPane.showMessageDialog(null, "Se ha actualizado el registro de manera exitosa.", "ALERTA", JOptionPane.INFORMATION_MESSAGE);
                     limpiarFormUsuario();
                 }
@@ -1581,14 +1576,14 @@ public class Oficial extends javax.swing.JFrame {
     }//GEN-LAST:event_btnActualizarUsuarioActionPerformed
 
     private void btnMostrarTablaVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarTablaVisitanteActionPerformed
-        this.tblTablaMostrarVisitantes.setModel(visitante.obtenerVisitanteTabla());
+        this.tblTablaMostrarVisitantes.setModel(tblVisitante.obtenerVisitanteTabla());
     }//GEN-LAST:event_btnMostrarTablaVisitanteActionPerformed
 
     private void btnBuscarVisitantesTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarVisitantesTablaActionPerformed
         String cedula; 
         
         cedula = tfBuscarVisitanteP.getText();
-        this.tblTablaMostrarVisitantes.setModel(visitante.obtenerVisitanteTabla(cedula));
+        this.tblTablaMostrarVisitantes.setModel(tblVisitante.obtenerVisitanteTabla(cedula));
     }//GEN-LAST:event_btnBuscarVisitantesTablaActionPerformed
 
     private void btnMostrarTablaCasaVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarTablaCasaVisitanteActionPerformed
@@ -1606,14 +1601,14 @@ public class Oficial extends javax.swing.JFrame {
         String nombre, apellido, cedula;
         boolean aux; 
 
-        cedula = tfVcedula.getText();
-        Visitante user = visitante.obtenerVisitantexCedula(cedula);
+        cedula = tfVisitanteCedula.getText();
+        Visitante user = tblVisitante.obtenerVisitantexCedula(cedula);
         try {
             if (!user.getCedula().equals("")) {
-                nombre = tfVnombre.getText();
-                apellido = tfVapellido.getText();
+                nombre = tfVisitanteNombre.getText();
+                apellido = tfVisitanteApellido.getText();
                 
-                if(VetadoCMBX.getSelectedItem().toString().equals("Betado")){
+                if(cboVisitanteEstado.getSelectedItem().toString().equals("Betado")){
                     aux = true; 
                 }else {
                     aux = false; 
@@ -1624,7 +1619,7 @@ public class Oficial extends javax.swing.JFrame {
                 if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta", JOptionPane.WARNING_MESSAGE);
                 } else {
-                    visitante.actualizarVisitante(cedula, nombre, apellido, aux);
+                    tblVisitante.actualizarVisitante(cedula, nombre, apellido, aux);
                     JOptionPane.showMessageDialog(null, "Se ha actualizado el registro de manera exitosa.", "ALERTA", JOptionPane.INFORMATION_MESSAGE);
                     limpiarFormUsuario();
                 }
@@ -1642,33 +1637,29 @@ public class Oficial extends javax.swing.JFrame {
         int codigoCasa = 0;
 
         cedula = tfResidenteCedula.getText();
-        ResultSet rs = tlbR.obtenerResidente(cedula);
+        Residente res = tblResidente.obtenerResidentexCedula(cedula);
 
-        try {
-
-            if (rs.next()) {
-                aux = JOptionPane.showConfirmDialog(null, "¿Desea eliminar el registro de " + rs.getString("nombres") + " " + rs.getString("apellidos") + "?");
-                codigoCasa = rs.getInt("casa");
-                if (JOptionPane.OK_OPTION == aux) {
-                    tlbR.borrarResidente(cedula);
-                    tlbC.borrarCasa(codigoCasa);
-                    limpiarFormResidente();
-                }
-            } else {
-                JOptionPane.showMessageDialog(null, "No se ha logrado encontrar el registro.", "Alerta", JOptionPane.ERROR_MESSAGE);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+         if(!res.getCedula().equals("")) {
+             aux = JOptionPane.showConfirmDialog(null, "Desea aliminar el registro?", "ALERTA", JOptionPane.WARNING_MESSAGE);
+         } else {
+             JOptionPane.showMessageDialog(null, "No se ha logrado encontrar el registro", "ERROR", JOptionPane.ERROR_MESSAGE);
+         }
+         
+         
+         if (JOptionPane.OK_OPTION == aux)
+         {
+             cedula = tfResidenteCedula.getText();
+             tblResidente.borrarResidente(cedula);
+             limpiarFormResidente();
+         }
     }//GEN-LAST:event_btnEliminarResidenteActionPerformed
 
     private void btnActualizarResidenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarResidenteActionPerformed
-        String nombre, apellido, cedula;
+String nombre, apellido, cedula;
         int dependientes, casa; 
 
         cedula = tfResidenteCedula.getText();
-        Residente res = tlbR.obtenerResidentexCedula(cedula);
+        Residente res = tblResidente.obtenerResidentexCedula(cedula);
         try {
             if (!res.getCedula().equals("")) {
                 nombre = tfResidenteNombre.getText();
@@ -1679,7 +1670,7 @@ public class Oficial extends javax.swing.JFrame {
                 if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || casa == 0 || dependientes == 0) {
                     JOptionPane.showMessageDialog(null, "Debe completar todos los campos!", "Alerta", JOptionPane.WARNING_MESSAGE);
                 } else {
-                    tlbR.actualizarResidente(cedula, nombre, apellido, dependientes, casa);
+                    tblResidente.actualizarResidente(cedula, nombre, apellido, dependientes, casa);
                     JOptionPane.showMessageDialog(null, "Se ha actualizado el registro de manera exitosa.", "ALERTA", JOptionPane.INFORMATION_MESSAGE);
                     limpiarFormUsuario();
                 }
@@ -1728,20 +1719,6 @@ public class Oficial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField BusquedaUsuarioP;
-    private javax.swing.JTextArea CasaDescripcion;
-    private javax.swing.JTextArea CasaDireccion;
-    private javax.swing.JTextField Uapellido;
-    private javax.swing.JTextField Ucarnet;
-    private javax.swing.JTextPane Ucedula;
-    private javax.swing.JTextField Unombre;
-    private javax.swing.JPasswordField Upassword;
-    private javax.swing.JTextField VEventoDestino;
-    private javax.swing.JTextField VEventoFecha;
-    private javax.swing.JTextField VEventoMatricula;
-    private javax.swing.JComboBox<String> VEventoRazon;
-    private javax.swing.JComboBox<String> VEventoTransporte;
-    private javax.swing.JTextField VEventoUsuario;
-    private javax.swing.JComboBox<String> VetadoCMBX;
     private javax.swing.JButton btnActualizarResidente;
     private javax.swing.JButton btnActualizarUsuario;
     private javax.swing.JButton btnActualizarVisitante;
@@ -1764,6 +1741,9 @@ public class Oficial extends javax.swing.JFrame {
     private javax.swing.JButton btnMostrarTablaUsuario;
     private javax.swing.JButton btnMostrarTablaVisitante;
     private javax.swing.JButton btnbuscarResidenteTabla;
+    private javax.swing.JComboBox<String> cboVisitanteEstado;
+    private javax.swing.JComboBox<String> cboVisitanteRazonVisita;
+    private javax.swing.JComboBox<String> cboVisitanteTransporte;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1834,13 +1814,24 @@ public class Oficial extends javax.swing.JFrame {
     private javax.swing.JTextField tfBuscarResidenteP;
     private javax.swing.JTextField tfBuscarVisitaP;
     private javax.swing.JTextField tfBuscarVisitanteP;
+    private javax.swing.JTextArea tfCasaDescripcion;
+    private javax.swing.JTextArea tfCasaDireccion;
+    private javax.swing.JTextField tfFechaVisita;
     private javax.swing.JTextField tfResidenteApellido;
     private javax.swing.JTextPane tfResidenteCedula;
     private javax.swing.JTextField tfResidenteFam;
     private javax.swing.JTextPane tfResidenteNoCasa;
     private javax.swing.JTextField tfResidenteNombre;
-    private javax.swing.JTextField tfVapellido;
-    private javax.swing.JTextPane tfVcedula;
-    private javax.swing.JTextField tfVnombre;
+    private javax.swing.JTextField tfUsuarioApellido;
+    private javax.swing.JTextField tfUsuarioCarnet;
+    private javax.swing.JTextPane tfUsuarioCedula;
+    private javax.swing.JPasswordField tfUsuarioContrasena;
+    private javax.swing.JTextField tfUsuarioNombre;
+    private javax.swing.JTextField tfVisitanteApellido;
+    private javax.swing.JTextField tfVisitanteCasa;
+    private javax.swing.JTextPane tfVisitanteCedula;
+    private javax.swing.JTextField tfVisitanteMatricula;
+    private javax.swing.JTextField tfVisitanteNombre;
+    private javax.swing.JTextField tfVisitanteResponsable;
     // End of variables declaration//GEN-END:variables
 }

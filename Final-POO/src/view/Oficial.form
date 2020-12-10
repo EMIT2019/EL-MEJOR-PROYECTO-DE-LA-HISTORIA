@@ -834,11 +834,11 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="Uapellido" min="-2" pref="265" max="-2" attributes="0"/>
-                                      <Component id="Unombre" min="-2" pref="265" max="-2" attributes="0"/>
+                                      <Component id="tfUsuarioApellido" min="-2" pref="265" max="-2" attributes="0"/>
+                                      <Component id="tfUsuarioNombre" min="-2" pref="265" max="-2" attributes="0"/>
                                       <Component id="jScrollPane14" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
-                                      <Component id="Ucarnet" min="-2" pref="265" max="-2" attributes="0"/>
-                                      <Component id="Upassword" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
+                                      <Component id="tfUsuarioCarnet" min="-2" pref="265" max="-2" attributes="0"/>
+                                      <Component id="tfUsuarioContrasena" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="btnGuardarUsuario" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
@@ -871,11 +871,11 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Unombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tfUsuarioNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Uapellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tfUsuarioApellido" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -886,13 +886,13 @@
                                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="Ucarnet" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tfUsuarioCarnet" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Upassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tfUsuarioContrasena" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
@@ -985,9 +985,9 @@
                     <Property name="text" type="java.lang.String" value="Registrar Usuario"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="Uapellido">
+                <Component class="javax.swing.JTextField" name="tfUsuarioApellido">
                 </Component>
-                <Component class="javax.swing.JTextField" name="Unombre">
+                <Component class="javax.swing.JTextField" name="tfUsuarioNombre">
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane14">
                   <AuxValues>
@@ -996,7 +996,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextPane" name="Ucedula">
+                    <Component class="javax.swing.JTextPane" name="tfUsuarioCedula">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1038,9 +1038,9 @@
                     <Property name="text" type="java.lang.String" value="Carnet:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="Ucarnet">
+                <Component class="javax.swing.JTextField" name="tfUsuarioCarnet">
                 </Component>
-                <Component class="javax.swing.JPasswordField" name="Upassword">
+                <Component class="javax.swing.JPasswordField" name="tfUsuarioContrasena">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel30">
                   <Properties>
@@ -1403,7 +1403,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="CasaDescripcion">
+                <Component class="javax.swing.JTextArea" name="tfCasaDescripcion">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -1418,7 +1418,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="CasaDireccion">
+                <Component class="javax.swing.JTextArea" name="tfCasaDireccion">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -1467,7 +1467,7 @@
                                               </Group>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="VetadoCMBX" min="-2" pref="265" max="-2" attributes="0"/>
+                                                  <Component id="cboVisitanteEstado" min="-2" pref="265" max="-2" attributes="0"/>
                                                   <Component id="jScrollPane13" min="-2" pref="265" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -1476,12 +1476,12 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="tfVapellido" min="-2" pref="265" max="-2" attributes="0"/>
+                                                  <Component id="tfVisitanteApellido" min="-2" pref="265" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="tfVnombre" min="-2" pref="265" max="-2" attributes="0"/>
+                                                  <Component id="tfVisitanteNombre" min="-2" pref="265" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -1501,12 +1501,12 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="VEventoDestino" min="-2" pref="265" max="-2" attributes="0"/>
-                                          <Component id="VEventoUsuario" min="-2" pref="265" max="-2" attributes="0"/>
-                                          <Component id="VEventoFecha" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
-                                          <Component id="VEventoTransporte" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
-                                          <Component id="VEventoMatricula" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
-                                          <Component id="VEventoRazon" min="-2" pref="265" max="-2" attributes="0"/>
+                                          <Component id="tfVisitanteCasa" min="-2" pref="265" max="-2" attributes="0"/>
+                                          <Component id="tfVisitanteResponsable" min="-2" pref="265" max="-2" attributes="0"/>
+                                          <Component id="tfFechaVisita" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
+                                          <Component id="cboVisitanteTransporte" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
+                                          <Component id="tfVisitanteMatricula" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
+                                          <Component id="cboVisitanteRazonVisita" min="-2" pref="265" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1529,19 +1529,19 @@
                                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="tfVnombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tfVisitanteNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="VEventoUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tfVisitanteResponsable" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="VEventoDestino" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tfVisitanteCasa" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1551,17 +1551,17 @@
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="VEventoFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tfFechaVisita" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="VEventoTransporte" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cboVisitanteTransporte" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="tfVapellido" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tfVisitanteApellido" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jScrollPane13" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -1572,14 +1572,14 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="VEventoMatricula" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfVisitanteMatricula" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="VetadoCMBX" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboVisitanteEstado" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="VEventoRazon" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboVisitanteRazonVisita" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1626,9 +1626,9 @@
                 <Property name="text" type="java.lang.String" value="Estado:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="tfVapellido">
+            <Component class="javax.swing.JTextField" name="tfVisitanteApellido">
             </Component>
-            <Component class="javax.swing.JTextField" name="tfVnombre">
+            <Component class="javax.swing.JTextField" name="tfVisitanteNombre">
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane13">
               <AuxValues>
@@ -1637,11 +1637,11 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="tfVcedula">
+                <Component class="javax.swing.JTextPane" name="tfVisitanteCedula">
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JComboBox" name="VetadoCMBX">
+            <Component class="javax.swing.JComboBox" name="cboVisitanteEstado">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
@@ -1749,13 +1749,13 @@
                 <Property name="text" type="java.lang.String" value="Razon de visita:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="VEventoDestino">
+            <Component class="javax.swing.JTextField" name="tfVisitanteCasa">
             </Component>
-            <Component class="javax.swing.JTextField" name="VEventoMatricula">
+            <Component class="javax.swing.JTextField" name="tfVisitanteMatricula">
             </Component>
-            <Component class="javax.swing.JTextField" name="VEventoFecha">
+            <Component class="javax.swing.JTextField" name="tfFechaVisita">
             </Component>
-            <Component class="javax.swing.JComboBox" name="VEventoRazon">
+            <Component class="javax.swing.JComboBox" name="cboVisitanteRazonVisita">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
@@ -1772,7 +1772,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JComboBox" name="VEventoTransporte">
+            <Component class="javax.swing.JComboBox" name="cboVisitanteTransporte">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
@@ -1799,9 +1799,9 @@
                 <Property name="text" type="java.lang.String" value="Responsable:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="VEventoUsuario">
+            <Component class="javax.swing.JTextField" name="tfVisitanteResponsable">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VEventoUsuarioActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfVisitanteResponsableActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnGuardarVisita">
